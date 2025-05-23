@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.page-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #1f1f1f;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000000aa;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.form input {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+.form input::placeholder {
+  color: #aaa;
+}
+
+.form button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
   color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.form button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  background-color: #1f1f1f;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 8px #000000aa;
+}
+
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+  color: #007bff;
+}
+
+.excursion-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.excursion-slider-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.excursion-heading {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #f0f0f0;
+}
+
+.excursion-filter {
+  margin-bottom: 2rem;
+}
+
+.filter-label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+
+.filter-select {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.excursion-slide {
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background-color: #1e1e1e;
+  transition: transform 0.3s ease;
+}
+
+.excursion-slide:hover {
+  transform: scale(1.03);
+}
+
+.excursion-image-wrapper {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-bottom: 1px solid #444;
+}
+
+.excursion-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.excursion-slide:hover .excursion-image {
+  transform: scale(1.05);
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 10px;
+  background: #3b82f6;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.favorite-active {
+  background-color: #ef4444;
+}
+
+.excursion-details {
+  padding: 1rem;
+  background-color: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: #eee;
+}
+
+.excursion-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.excursion-description {
+  margin-top: 0.5rem;
+  color: #ccc;
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.excursion-price {
+  font-weight: bold;
+  color: #3b82f6;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+}
+
+.slider-btn {
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.slider-btn:hover {
+  background-color: #2563eb;
+}
+
+.no-excursions {
+  font-style: italic;
+  color: #6b7280;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.centered-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.excursion-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
 }

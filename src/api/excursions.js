@@ -1,0 +1,45 @@
+// src/api/excursions.js
+const excursions = [
+  {
+    id: 1,
+    title: "Почивка на морето в Созопол",
+    description: "Насладете се на слънце и море в красивия Созопол.",
+    imageUrl:
+      "https://www.xn--b1amfkf4a4b.xn--90ae/images-big/naem/noshtuvka/apartament-diva-s-izgled-kam-moreto-v-sozopol-7690980_116914569.jpg",
+    price: 250,
+    country: "България",
+  },
+  {
+    id: 2,
+    title: "Градски тур в Пловдив",
+    description: "Разгледайте центъра на Пловдив.",
+    imageUrl:
+      "https://www.globaltour.bg/img/PROGRAMI/BIG_plovdiv-tour_16122670583967.jpg",
+    price: 100,
+    country: "България",
+  },
+  {
+    id: 3,
+    title: "Барселона - Саграда Фамилия",
+    description: "Открий магията на Испания.",
+    imageUrl:
+      "https://d2rdhxfof4qmbb.cloudfront.net/wp-content/uploads/2023/07/wallpaperaccess.com_-1024x640.jpg",
+    price: 400,
+    country: "Испания",
+  },
+  {
+    id: 4,
+    title: "Лондон - Биг Бен и Темза",
+    description: "Английска култура и стил.",
+    imageUrl:
+      "https://www.visitlondon.com/-/media/images/london/visit/things-to-do/sightseeing/london-attractions/big-ben/big-ben-houses-of-parliament-shutterstock640x360jpg.jpg?h=360&w=640&rev=e8ecaf8f5b5c46138df9bdd608b8d5da&hash=A8313B21036432D858B3C6A3C59359E2",
+    price: 500,
+    country: "Англия",
+  },
+];
+
+export function fetchExcursions() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(excursions), 500);
+  });
+}
