@@ -47,12 +47,24 @@ export default function Favorites() {
           </div>
         ))}
       </div>
-      <Link
-        to="/"
-        className="text-blue-600 hover:underline mt-6 inline-block"
-        style={{ display: "inline-block", marginTop: "1.5rem" }}>
-        Върни се към каталога
-      </Link>
+      <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <Link
+          to="/"
+          className="text-blue-600 hover:underline"
+          style={{
+            fontSize: "1.1rem",
+            fontWeight: "600",
+            padding: "10px 20px",
+            backgroundColor: "#e0e7ff",
+            borderRadius: "6px",
+            display: "inline-block",
+            textDecoration: "none",
+            color: "#2563eb",
+            transition: "background-color 0.3s ease",
+          }}>
+          ⬅️ Върни се към каталога
+        </Link>
+      </div>
     </div>
   );
 }
